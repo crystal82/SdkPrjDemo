@@ -15,10 +15,13 @@ import okhttp3.Response;
 
 public class OkhttpRequest {
 
-    public interface RequestBack {
-        void onFailure(IOException e);
+    public interface TestInnerInterface {
+        void methodA();
+    }
 
-        void onResponse(String info);
+    public class A {
+        public void mA() {
+        }
     }
 
     public static void doRequest(String url, final RequestBack requestBack) {

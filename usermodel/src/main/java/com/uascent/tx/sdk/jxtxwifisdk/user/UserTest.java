@@ -4,6 +4,7 @@ import android.content.Context;
 import android.widget.Toast;
 
 import com.uascent.tx.sdk.jxtxwifisdk.utils.OkhttpRequest;
+import com.uascent.tx.sdk.jxtxwifisdk.utils.RequestBack;
 
 /**
  * 作者：HWQ on 2018/3/6 09:40
@@ -16,7 +17,7 @@ public class UserTest {
         Toast.makeText(context, "-----User----:" + info, Toast.LENGTH_SHORT).show();
     }
 
-    public static void requestUser(String url, OkhttpRequest.RequestBack requestBack) {
+    public static void requestUser(String url, RequestBack requestBack) {
         OkhttpRequest.doRequest(url, requestBack);
     }
 }
