@@ -1,1 +1,1 @@
-include ':app', ':center', ':usermodel', ':utilsmodule', ':buildpkg'
+include ':app', ':Center', ':UtilsModule', ':BuildPkg', ':LogModule', ':DeviceInfoModule', ':UserModule', ':DeviceSetNetModule', ':DeviceControlModule'

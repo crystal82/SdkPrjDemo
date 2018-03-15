@@ -38,4 +38,5 @@ dependencies {
     compile 'com.android.support.test.espresso:espresso-core:3.0.1'
     //compile(name: 'mysdk-all-1.0', ext: 'aar')
     compile files('libs/classes.jar')
+
 }
