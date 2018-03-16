@@ -24,7 +24,7 @@ android {
         }
     }
 }
-repositories{
+repositories {
     flatDir {
         dirs 'libs'
     }
@@ -39,4 +39,6 @@ dependencies {
     //compile(name: 'mysdk-all-1.0', ext: 'aar')
     compile files('libs/classes.jar')
 
+    compile project(':apt_process')
+    annotationProcessor project(':apt_process')
 }
