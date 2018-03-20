@@ -10,6 +10,7 @@ import com.uascent.tx.sdk.jxtxwifisdk.utils.OkhttpRequest;
 import com.uascent.tx.sdk.jxtxwifisdk.utils.RequestBack;
 
 import java.io.IOException;
+import java.util.ServiceLoader;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
                 });
             }
         });
+
     }
 
 }

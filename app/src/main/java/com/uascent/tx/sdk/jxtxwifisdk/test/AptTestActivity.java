@@ -6,7 +6,7 @@ import android.widget.Button;
 
 import com.uascent.tx.sdk.jxtxwifisdk.R;
 
-import jxtxwifisdk.sdk.tx.uascent.com.apt_lib.AutoCreateTest;
+import jxtxwifisdk.sdk.tx.uascent.com.annotation.test.AutoCreateTest;
 
 /**
  * 流程：

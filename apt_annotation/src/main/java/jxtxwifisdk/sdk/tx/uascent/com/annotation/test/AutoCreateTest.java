@@ -1,4 +1,4 @@
-package jxtxwifisdk.sdk.tx.uascent.com.apt_lib;
+package jxtxwifisdk.sdk.tx.uascent.com.annotation.test;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

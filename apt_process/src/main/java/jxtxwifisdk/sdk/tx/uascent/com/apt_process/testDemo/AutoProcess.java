@@ -15,7 +15,7 @@ import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 
-import jxtxwifisdk.sdk.tx.uascent.com.apt_lib.AutoCreateTest;
+import jxtxwifisdk.sdk.tx.uascent.com.annotation.test.AutoCreateTest;
 
 @AutoService(Processor.class)
 public class AutoProcess extends AbstractProcessor {
