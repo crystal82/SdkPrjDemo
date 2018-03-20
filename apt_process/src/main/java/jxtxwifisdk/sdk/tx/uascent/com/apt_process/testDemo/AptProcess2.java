@@ -1,4 +1,4 @@
-package jxtxwifisdk.sdk.tx.uascent.com.apt_process;
+package jxtxwifisdk.sdk.tx.uascent.com.apt_process.testDemo;
 
 
 import com.google.auto.service.AutoService;
@@ -12,19 +12,18 @@ import java.util.Collections;
 import java.util.Set;
 
 import javax.annotation.processing.AbstractProcessor;
-import javax.annotation.processing.ProcessingEnvironment;
 import javax.annotation.processing.Processor;
 import javax.annotation.processing.RoundEnvironment;
 import javax.lang.model.element.Modifier;
 import javax.lang.model.element.TypeElement;
 
-import jxtxwifisdk.sdk.tx.uascent.com.apt_lib.AutoCreate;
+import jxtxwifisdk.sdk.tx.uascent.com.apt_lib.AutoCreateTest;
 
 @AutoService(Processor.class)
 public class AptProcess2 extends AbstractProcessor {
     @Override
     public Set<String> getSupportedAnnotationTypes() {
-        return Collections.singleton(AutoCreate.class.getCanonicalName());
+        return Collections.singleton(AutoCreateTest.class.getCanonicalName());
     }
 
     @Override

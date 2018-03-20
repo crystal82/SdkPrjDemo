@@ -1,1 +1,1 @@
-include ':app', ':Center', ':UtilsModule', ':BuildPkg', ':LogModule', ':DeviceInfoModule', ':UserModule', ':DeviceSetNetModule', ':DeviceControlModule', ':apt_lib', ':apt_process'
+include ':app', ':Center', ':UtilsModule', ':BuildPkg', ':LogModule', ':DeviceInfoModule', ':UserModule', ':DeviceSetNetModule', ':DeviceControlModule', ':apt_lib', ':apt_process', ':router_compile'

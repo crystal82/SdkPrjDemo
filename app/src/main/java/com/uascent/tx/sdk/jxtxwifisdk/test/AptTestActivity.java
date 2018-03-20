@@ -2,10 +2,11 @@ package com.uascent.tx.sdk.jxtxwifisdk.test;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.Button;
 
 import com.uascent.tx.sdk.jxtxwifisdk.R;
 
-import jxtxwifisdk.sdk.tx.uascent.com.apt_lib.AutoCreate;
+import jxtxwifisdk.sdk.tx.uascent.com.apt_lib.AutoCreateTest;
 
 /**
  * 流程：
@@ -27,12 +28,16 @@ import jxtxwifisdk.sdk.tx.uascent.com.apt_lib.AutoCreate;
  * 2.process文件中不能有任何注释！！
  * 3.创建的lib必须为Java Lib
  */
-@AutoCreate
 public class AptTestActivity extends AppCompatActivity {
+
+    @AutoCreateTest
+    private Button mButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_apt_test);
+
+        mButton = findViewById(R.id.btn);
     }
 }
