@@ -3,7 +3,15 @@
           package="jxtxwifisdk.sdk.tx.uascent.com.deviceinfomodule">
 
     <application>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MyMainActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="com.knight.main"
+                    android:scheme="router" />
+            </intent-filter>
         </activity>
     </application>
 

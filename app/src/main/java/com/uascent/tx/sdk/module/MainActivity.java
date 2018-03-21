@@ -11,14 +11,8 @@ import com.uascent.tx.sdk.jxtxwifisdk.R;
 import com.uascent.tx.sdk.jxtxwifisdk.base.RouterService;
 import com.uascent.tx.sdk.jxtxwifisdk.base.bean.DeviceBean;
 import com.uascent.tx.sdk.jxtxwifisdk.base.bean.UserBean;
-import com.uascent.tx.sdk.jxtxwifisdk.center.CenterTest;
-import com.uascent.tx.sdk.jxtxwifisdk.user.UserTest;
-import com.uascent.tx.sdk.jxtxwifisdk.utils.OkhttpRequest;
-import com.uascent.tx.sdk.jxtxwifisdk.utils.RequestBack;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.ServiceLoader;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -70,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_to_device_net:
                 mRouterService.startDeviceSetNetActivity("to device net",
+                                                         "SmartLink",
                                                          System.currentTimeMillis() + "",
                                                          mUserBean);
                 break;

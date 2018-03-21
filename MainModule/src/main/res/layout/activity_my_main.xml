@@ -9,19 +9,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="设备控制"/>
+        android:text="My_main"/>
 
     <TextView
-        android:layout_marginTop="50dp"
-        android:id="@+id/tv_devices"
+        android:id="@+id/tv_describe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="跳转描述"/>
+        android:layout_marginTop="20dp"
+        android:text="My_main"/>
 
     <TextView
-        android:id="@+id/tv_device_name"
+        android:id="@+id/tv_user"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="设备名称"/>
+        android:layout_marginTop="20dp"
+        android:text="用户"/>
 </LinearLayout>

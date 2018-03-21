@@ -14,6 +14,15 @@ public class UserBean implements Parcelable {
     private String account;
     private String token;
 
+    @Override
+    public String toString() {
+        return "UserBean{" +
+                "name='" + name + '\'' +
+                ", account='" + account + '\'' +
+                ", token='" + token + '\'' +
+                '}';
+    }
+
     public UserBean(String name, String account, String token) {
         this.name = name;
         this.account = account;

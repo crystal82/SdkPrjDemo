@@ -26,11 +26,11 @@ public interface RouterService {
     @IntentCombineUri(scheme = "router", host = "com.knight.control", port =
             "6666", path = "/control")
     void startDeviceControlActivity(@ParamIntentExtrasData("user") UserBean userBean,
-                                    @ParamIntentExtrasData("device")
-                                            ArrayList<DeviceBean> deviceBeans);
+                                    @ParamIntentExtrasData("device") ArrayList<DeviceBean> deviceBeans);
 
     @IntentExactHostUri("router://com.knight.setnet")
     void startDeviceSetNetActivity(@ParamActionDescribe("describe") String describe,
+                                   @ParamIntentExtrasData("type") String type,
                                    @ParamIntentExtrasData("time") String time,
                                    @ParamIntentExtrasData("user") UserBean userBean);
 }

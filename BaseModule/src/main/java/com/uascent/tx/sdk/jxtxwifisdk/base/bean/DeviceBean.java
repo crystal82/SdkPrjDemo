@@ -13,6 +13,15 @@ public class DeviceBean implements Parcelable {
     String deviceName;
     String deviceId;
 
+    @Override
+    public String toString() {
+        return "DeviceBean{" +
+                "deviceType='" + deviceType + '\'' +
+                ", deviceName='" + deviceName + '\'' +
+                ", deviceId='" + deviceId + '\'' +
+                '}';
+    }
+
     public DeviceBean(String deviceType, String deviceName, String deviceId) {
         this.deviceType = deviceType;
         this.deviceName = deviceName;
