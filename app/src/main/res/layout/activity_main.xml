@@ -5,15 +5,49 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.uascent.tx.sdk.jxtxwifisdk.MainActivity">
+    tools:context="com.uascent.tx.sdk.jxtxwifisdk.com.uascent.tx.sdk.module.MainActivity">
 
-    <TextView
+    <Button
+        android:id="@+id/btn_to_main"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="主界面"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
+    <Button
+        android:id="@+id/btn_to_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="跳转至用户"
+        app:layout_constraintBottom_toTopOf="@+id/btn_to_main"
+        app:layout_constraintEnd_toEndOf="@+id/btn_to_main"
+        app:layout_constraintStart_toStartOf="@+id/btn_to_main"/>
+
+    <Button
+        android:id="@+id/btn_to_device_net"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="设备配网"
+        app:layout_constraintEnd_toEndOf="@+id/btn_to_main"
+        app:layout_constraintStart_toStartOf="@+id/btn_to_main"
+        app:layout_constraintTop_toBottomOf="@+id/btn_to_main"/>
+
+    <Button
+        android:id="@+id/btn_to_device_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="设备控制"
+        app:layout_constraintEnd_toEndOf="@+id/btn_to_device_net"
+        app:layout_constraintStart_toStartOf="@+id/btn_to_device_net"
+        app:layout_constraintTop_toBottomOf="@+id/btn_to_device_net"/>
 </android.support.constraint.ConstraintLayout>

@@ -3,8 +3,8 @@ package com.uascent.tx.sdk.jxtxwifisdk.user;
 import android.content.Context;
 import android.widget.Toast;
 
-import com.uascent.tx.sdk.jxtxwifisdk.utils.OkhttpRequest;
-import com.uascent.tx.sdk.jxtxwifisdk.utils.RequestBack;
+import com.uascent.tx.sdk.jxtxwifisdk.base.OkhttpRequest;
+import com.uascent.tx.sdk.jxtxwifisdk.base.RequestBack;
 
 /**
  * 作者：HWQ on 2018/3/6 09:40
