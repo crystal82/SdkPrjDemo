@@ -46,6 +46,7 @@ dependencies {
     compile rootProject.ext.dependencies["appcompat-v7"]
     compile rootProject.ext.dependencies["recyclerview-v7"]
     compile project(':router')
+    compile project(':LibModule')
 }
 
 //jar {

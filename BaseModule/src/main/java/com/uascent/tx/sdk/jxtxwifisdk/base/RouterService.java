@@ -30,6 +30,7 @@ public interface RouterService {
                                             ArrayList<DeviceBean> deviceBeans);
 
     @IntentExactHostUri("router://com.knight.setnet")
-    void startDeviceSetNetActivity(@ParamIntentExtrasData("user") UserBean userBean,
-                                   @ParamActionDescribe("describe") String describe);
+    void startDeviceSetNetActivity(@ParamActionDescribe("describe") String describe,
+                                   @ParamIntentExtrasData("time") String time,
+                                   @ParamIntentExtrasData("user") UserBean userBean);
 }

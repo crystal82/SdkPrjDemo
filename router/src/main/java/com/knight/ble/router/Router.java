@@ -7,6 +7,7 @@ import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.text.TextUtils;
 
 import java.io.Serializable;
 import java.lang.annotation.Annotation;
@@ -41,11 +42,12 @@ public class Router {
     public <T> T createService(Class<T> tClass) {
         return (T) Proxy.newProxyInstance(
                 tClass.getClassLoader(),
-                new Class[]{ tClass },
+                new Class[]{tClass},
                 new InvocationHandler() {
                     @Override
-                    public Object invoke(Object proxy, Method method, Object[] args) throws
-                            Throwable {
+                    public Object invoke(Object proxy, Method method, Object[] args)
+                            throws
+                                                                                     Throwable {
 
                         //解析Method注解,拼接uri
                         StringBuilder uriBuild = analysisMethod(method);
@@ -64,8 +66,10 @@ public class Router {
     private StringBuilder analysisMethod(Method method) {
         StringBuilder uriBuilder = new StringBuilder();
 
-        IntentExactHostUri intentExactHostUri = method.getAnnotation(IntentExactHostUri.class);
-        IntentCombineUri   intentCombineUri   = method.getAnnotation(IntentCombineUri.class);
+        IntentExactHostUri intentExactHostUri = method.getAnnotation(IntentExactHostUri
+                                                                             .class);
+        IntentCombineUri   intentCombineUri   = method.getAnnotation(IntentCombineUri
+                                                                             .class);
 
         if (intentExactHostUri != null) {
             uriBuilder.append(intentExactHostUri.value());
@@ -75,8 +79,10 @@ public class Router {
             String port   = intentCombineUri.port();
             String path   = intentCombineUri.path();
 
-            uriBuilder.append(scheme).append("://").append(host).append(":").append(port).append("/")
-                    .append(path);
+            uriBuilder.append(scheme).append("://").append(host)
+                    .append(TextUtils.isEmpty(port) ? "" : ":" + port)
+                    .append(TextUtils.isEmpty(path) ? "" : path.startsWith("/") ? path
+                            : ("/" + path));
 
         } else {
             throw new IllegalArgumentException("Annotation is error");
@@ -101,9 +107,12 @@ public class Router {
             if (annotation instanceof ParamActionDescribe) {
                 uriBuild.append(position == 0 ? "?" : "&");
                 position++;
-                uriBuild.append(((ParamActionDescribe) annotation).value()).append("=").append(args[i]);
+                uriBuild.append(((ParamActionDescribe) annotation).value())
+                        .append("=")
+                        .append(args[i]);
             } else if (annotation instanceof ParamIntentExtrasData) {
-                bundlePutParam(bundle, ((ParamIntentExtrasData) annotation).value(), args[i]);
+                bundlePutParam(bundle, ((ParamIntentExtrasData) annotation).value(),
+                               args[i]);
             }
         }
         return bundle;
@@ -115,7 +124,7 @@ public class Router {
         PackageManager packageManager = context.getPackageManager();
         //查找是否存目标activity
         List<ResolveInfo> activities = packageManager.queryIntentActivities(intent, 0);
-        if (activities.size() > 0) {
+        if (!activities.isEmpty()) {
             context.startActivity(intent);
         }
     }
@@ -162,7 +171,8 @@ public class Router {
             } else if (list.get(0) instanceof CharSequence) {
                 bundle.putCharSequenceArrayList(key, (ArrayList<CharSequence>) value);
             } else if (list.get(0) instanceof Parcelable) {
-                bundle.putParcelableArrayList(key, (ArrayList<? extends Parcelable>) value);
+                bundle.putParcelableArrayList(key, (ArrayList<? extends Parcelable>)
+                        value);
             }
         } else if (value instanceof Parcelable) {
             bundle.putParcelable(key, (Parcelable) value);

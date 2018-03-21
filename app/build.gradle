@@ -41,4 +41,5 @@ dependencies {
 
     compile project(':apt_process')
     annotationProcessor project(':apt_process')
+    compile project(':Center')
 }

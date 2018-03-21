@@ -11,8 +11,14 @@ import android.os.Parcelable;
 public class UserBean implements Parcelable {
 
     private String name;
-    private String userName;
+    private String account;
     private String token;
+
+    public UserBean(String name, String account, String token) {
+        this.name = name;
+        this.account = account;
+        this.token = token;
+    }
 
     @Override
     public int describeContents() {
@@ -22,7 +28,7 @@ public class UserBean implements Parcelable {
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(this.name);
-        dest.writeString(this.userName);
+        dest.writeString(this.account);
         dest.writeString(this.token);
     }
 
@@ -31,7 +37,7 @@ public class UserBean implements Parcelable {
 
     protected UserBean(Parcel in) {
         this.name = in.readString();
-        this.userName = in.readString();
+        this.account = in.readString();
         this.token = in.readString();
     }
 

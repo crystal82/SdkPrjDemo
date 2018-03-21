@@ -4,6 +4,17 @@
 
     <application>
         <activity android:name=".DeviceControlActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+                <data
+                    android:host="com.knight.control"
+                    android:port="6666"
+                    android:path="/control"
+                    android:scheme="router" />
+            </intent-filter>
         </activity>
     </application>
 
