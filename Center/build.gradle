@@ -39,6 +39,5 @@ dependencies {
     compile project(':DeviceControlModule')
     compile project(':DeviceSetNetModule')
     compile project(':MainModule')
-    compile project(':router')
     compile project(':BaseModule')
 }

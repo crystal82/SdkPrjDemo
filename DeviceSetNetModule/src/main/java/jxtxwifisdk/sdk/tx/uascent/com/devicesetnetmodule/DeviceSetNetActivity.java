@@ -27,7 +27,7 @@ public class DeviceSetNetActivity extends AppCompatActivity implements DeviceSet
 
 
         String   time     = getIntent().getStringExtra("time");
-        String   time2    = (String) getIntent().getBundleExtra("time").get("time");
+        //String   time2    = (String) getIntent().getBundleExtra("time").get("time");
         UserBean userBean = getIntent().getParcelableExtra("user");
 
         mTv_describe = findViewById(R.id.tv_describe);
@@ -37,7 +37,7 @@ public class DeviceSetNetActivity extends AppCompatActivity implements DeviceSet
 
         mTv_describe.setText("describe1:" + describe1 + "    describe2:" + describe2);
         mTv_set_type.setText("type:" + type);
-        mTv_time.setText("time:" + time + "   time2:" + time2);
+        mTv_time.setText("time:" + time);
         mTv_user.setText("userBean:" + userBean);
     }
 
